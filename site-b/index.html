@@ -5,62 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jane Doe | DevOps Engineer</title>
     <meta name="description" content="Portfolio of Jane Doe, DevOps Engineer">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="profile">
-            <div class="avatar">JD</div>
-            <h2>Jane Doe</h2>
-            <p>DevOps Engineer</p>
-        </div>
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="socials">
-            <a href="#">GH</a>
-            <a href="#">LI</a>
-            <a href="#">TW</a>
-        </div>
-    </div>
+    <div class="grid-bg"></div>
+    
+    <nav class="floating-nav">
+        <a href="#about" class="active">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
 
     <main class="content">
+        <header class="profile-header">
+            <div class="profile-meta">
+                <div class="avatar-ring">
+                    <img src="https://ui-avatars.com/api/?name=Jane+Doe&background=10b981&color=fff&size=150" alt="Jane Doe" class="avatar">
+                </div>
+                <div class="profile-info">
+                    <h1>Jane Doe</h1>
+                    <p class="role">Senior DevOps Engineer</p>
+                    <div class="socials">
+                        <a href="#">GitHub</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Terminal</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <section id="about" class="section">
-            <h1 class="title">Hello, I'm <span class="highlight">Jane</span>.</h1>
-            <p class="lead">I automate infrastructure, build CI/CD pipelines, and scale applications in the cloud.</p>
-            <p>With a passion for clean code and robust systems, I bridge the gap between development and operations. My goal is to make software delivery fast, reliable, and secure.</p>
+            <h2 class="title">Engineering <span class="highlight">Reliability</span>.</h2>
+            <p class="lead">I automate infrastructure, build bulletproof CI/CD pipelines, and scale applications seamlessly in the cloud.</p>
+            <p class="desc">With a deep passion for clean code and robust systems infrastructure, I bridge the critical gap between development and operations. My primary goal is to make software delivery blindingly fast, infinitely reliable, and rock-solid secure.</p>
         </section>
 
         <section id="skills" class="section">
-            <h2>Technical Arsenal</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">Linux</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Kubernetes</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Terraform</span>
-                <span class="skill-tag">GitHub Actions</span>
-                <span class="skill-tag">Nginx</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Bash</span>
+            <div class="section-heading">
+                <h2>Technical Arsenal</h2>
+                <div class="line"></div>
+            </div>
+            <div class="ticker-wrap">
+                <div class="skills-grid">
+                    <span class="skill-tag"><span class="dot"></span> Linux</span>
+                    <span class="skill-tag"><span class="dot"></span> Docker</span>
+                    <span class="skill-tag"><span class="dot"></span> Kubernetes</span>
+                    <span class="skill-tag"><span class="dot"></span> AWS</span>
+                    <span class="skill-tag"><span class="dot"></span> Terraform</span>
+                    <span class="skill-tag"><span class="dot"></span> GitHub Actions</span>
+                    <span class="skill-tag"><span class="dot"></span> Nginx</span>
+                    <span class="skill-tag"><span class="dot"></span> Python</span>
+                    <span class="skill-tag"><span class="dot"></span> Go</span>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="section">
-            <h2>Recent Work</h2>
+            <div class="section-heading">
+                <h2>Featured Work</h2>
+                <div class="line"></div>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Microservices Migration</h3>
-                    <p>Led the migration of a monolith legacy application to a microservices architecture on EKS.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Automated CI/CD</h3>
-                    <p>Implemented zero-downtime deployment pipelines using GitHub Actions and ArgoCD.</p>
-                </div>
+                <a href="#" class="project-card">
+                    <div class="card-content">
+                        <h3>Microservices Arch</h3>
+                        <p>Led the migration of a monolith legacy application to a multi-cluster microservices architecture on EKS.</p>
+                        <div class="card-tags">
+                            <span>AWS</span><span>EKS</span><span>Terraform</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="project-card">
+                    <div class="card-content">
+                        <h3>Zero-Downtime CI/CD</h3>
+                        <p>Architected and implemented progressive delivery pipelines using GitHub Actions and ArgoCD.</p>
+                        <div class="card-tags">
+                            <span>GitOps</span><span>ArgoCD</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
     </main>

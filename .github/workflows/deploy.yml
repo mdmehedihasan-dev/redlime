@@ -18,7 +18,7 @@ jobs:
           key: "${{ secrets.SERVER_SSH_KEY }}"
           script_stop: true 
           script: |
-            cd /opt/devops-assessment  # Assuming the repository is cloned here
+            cd ~/redlime  # Changing to where you cloned it on AWS
             git pull origin main
             
             # Restart docker compose with new changes

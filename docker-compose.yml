@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Nginx Reverse Proxy
+  proxy:
+    image: nginx:alpine
+    container_name: proxy_server
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - site-a
+      - site-b
+    networks:
+      - web-network
+    restart: unless-stopped
+
+  # Site A: Company Landing Page
+  site-a:
+    build:
+      context: ./site-a
+    container_name: company_site
+    networks:
+      - web-network
+    restart: unless-stopped
+
+  # Site B: Portfolio/About Page
+  site-b:
+    build:
+      context: ./site-b
+    container_name: portfolio_site
+    networks:
+      - web-network
+    restart: unless-stopped
+
+networks:
+  web-network:
+    driver: bridge

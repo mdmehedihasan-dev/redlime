@@ -280,6 +280,16 @@ body {
     color: var(--text-secondary);
 }
 
+.text-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--surface);
+    background: linear-gradient(135deg, var(--accent), #047857);
+}
+
 @media (max-width: 768px) {
     .title { font-size: 3rem; }
     .profile-meta { flex-direction: column; text-align: center; }

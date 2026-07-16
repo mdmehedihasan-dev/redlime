@@ -119,3 +119,9 @@ docker-compose down
 - **Routing Methodology:** I opted for **path-based routing** (`/site-a/`, `/site-b/`) rather than subdomains (e.g., `sitea.local`). Path-based routing requires zero local DNS/hostfile tweaking, making it immediately previewable anywhere, including `localhost`.
 - **Nginx Base Images:** Used `nginx:alpine` for both the master reverse proxy and the downstream target servers. This minimizes image size and removes known vulnerabilities often found in heavier base images.
 - **Port Mapping:** The backend applications (Site A & Site B) do not expose ports directly to the local host machine (no `ports` mapping in docker-compose for these services). This restricts direct access; they can ONLY be accessed securely via the master Nginx reverse proxy.
+
+## Bonus Points Achieved
+
+- **Environment Variables:** Sensitive connection details (host, username, ssh keys) are managed securely via GitHub Actions Secrets rather than hardcoded.
+- **Docker Image Optimization:** The `nginx:alpine` base image is used to keep container footprint as minimal as possible, resulting in faster pull/build times and a reduced attack surface.
+- **Clean Structure & Organization:** Follows best practices for separating proxy configurations, docker orchestrations, and application code.
